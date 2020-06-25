@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@using loginregistration.Models;
+@model User
+<style>
+    .card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+}
+</style>
+
+
+<div class="register">
+    <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+        <div class="card-header">Register</div>
+            <div class="card-body">
+            <form asp-action="Register" asp-asp-controller="Home" method="post">
+                <div class="form-group cart-text">
+                    
+                    
+                    <label asp-for="FirstName">First Name:</label>
+                    <input type="text" asp-for="FirstName" placeholder="First Name"></br>
+                    <span class="text-warning" asp-validation-for="FirstName"></span>
+
+                </div>
+                <div class="form-group card-text">
+                    
+    
+                    <label asp-for="LastName">Last Name:</label>
+                    <input type="text" asp-for="LastName" placeholder="Last Name"></br>
+                    <span class="text-warning" asp-validation-for="LastName"></span>
+                   
+                </div>
+
+                <div class="form-group card-text">
+                    
+    
+                    <label asp-for="Email">Email address:</label>
+                    <input type="email" asp-for="Email" placeholder="Enter email"></br>
+                    <span class="text-warning" asp-validation-for="Email"></span>
+                    
+                </div>
+                <div class="form-group card-text">
+                    <label asp-for="Password">Password:</label>
+                    <input type="password" asp-for="Password" placeholder="Password"></br>
+                    <span class="text-warning" asp-validation-for="Password"></span>
+                   
+                </div>
+                <div class="form-group card-text">
+                    
+                    <label asp-for="Confirm">Confirm Password:</label>
+                    <input type="password" asp-for="Confirm" placeholder="Confirm"></br>
+                    <span class="text-warning" asp-validation-for="Confirm"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+

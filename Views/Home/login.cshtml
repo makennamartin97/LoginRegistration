@@ -1,0 +1,42 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@using loginregistration.Models;
+@model LoginUser
+
+<style>
+    .card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+}
+
+
+
+
+</style>
+
+<div class="login">
+<div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+    <div class="card-header">Login</div>
+        <div class="card-body">
+            <form asp-action="Login" asp-asp-controller="Home" method="post">
+                <div class="form-group card-text">
+
+                    <label asp-for="LoginEmail">Email address:</label>
+                    <input type="email" asp-for="LoginEmail" placeholder="Enter email">
+                    <span class="text-warning" asp-validation-for="LoginEmail"></span>
+                </div>
+                <div class="form-group card-text">
+                    
+                    <label asp-for="LoginPassword">Password:</label>
+                    <input type="password" asp-for="LoginPassword" placeholder="Password">
+                    <span class="text-warning" asp-validation-for="LoginPassword"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+
